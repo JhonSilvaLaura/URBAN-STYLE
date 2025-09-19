@@ -1,14 +1,16 @@
 {
   "name": "urban-style",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:urban-style": "node dist/urban-style/server/server.mjs"
-  },
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "build:ssr": "ng build && ng run urban-style:server",
+  "serve:ssr": "node dist/urban-style/server/server.mjs",
+  "dev:ssr": "ng run urban-style:serve-ssr"
+},
   "prettier": {
     "overrides": [
       {
@@ -29,8 +31,11 @@
     "@angular/platform-server": "^20.1.0",
     "@angular/router": "^20.1.0",
     "@angular/ssr": "^20.1.5",
+    "@tailwindcss/postcss": "^4.1.13",
     "express": "^5.1.0",
+    "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.1.13",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

@@ -1,0 +1,12 @@
+<div class="bg-white h-[80px] p-4 flex justify-evenly items-center border-b border-gray-200">
+  <h1 class="text-2xl text-blue-600 font-semibold">Urban Style</h1>
+  <nav>
+    <ul class="flex items-center justify-around gap-6">
+      @for (route of routes; track $index) {
+      <li>
+        <a [routerLink]="route.path" routerLinkActive="btn-Active" [routerLinkActiveOptions]="{exact:true}">{{ route.name }}</a>
+      </li>
+      }
+    </ul>
+  </nav>
+</div>

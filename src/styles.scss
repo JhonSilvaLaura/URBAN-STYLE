@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+
+@layer components{
+  .btn-Active{
+    @apply bg-blue-600 text-white p-3 rounded-2xl;
+  }
+}
